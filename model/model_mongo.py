@@ -23,7 +23,8 @@ def connect_mongodb():
     try:
         mongo_user = Config['mongodb']['username']
         mongo_pass = Config['mongodb']['password']
-        cluster = MongoClient("mongodb://"+ mongo_user + ":"+ mongo_pass +"@192.168.55.5:27017/?directConnection=true&authMechanism=DEFAULT&authSource=healthscore")
+        host = Config['mongodb']['host']
+        cluster = MongoClient("mongodb://"+ mongo_user + ":"+ mongo_pass +"@"+ host+"/?directConnection=true&authMechanism=DEFAULT&authSource=healthscore")
         # cluster = MongoClient("mongodb://healthscoreadmin:w%2Cji%5Ehlb0Ut@192.168.55.5:27017/?directConnection=true&authMechanism=DEFAULT&authSource=healthscore")
         return cluster
     except Exception as e:

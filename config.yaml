@@ -2,7 +2,7 @@
 mongodb:
   username: healthscoreadmin
   password: w%2Cji%5Ehlb0Ut
-
+  host: 192.168.55.5:27017
 line:
   token: iqiKAZ37oSXr9RWmzs2RosNhi2prS8Jm6OJX4krxCbW
     
