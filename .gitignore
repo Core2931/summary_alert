@@ -1,4 +1,4 @@
 
-
-.yaml
 __pycache__
+*.yaml
+*.yml
